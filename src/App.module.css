@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  background: #f7fafc;
+  color: #2d3748;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #3182ce;
+}
+
+.navLink {
+  margin-left: 1.5rem;
+  color: #3182ce;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover,
+.navLink:focus {
+  color: #2c5282;
+  text-decoration: underline;
+}
+
+.main {
+  width: 100%;
+  padding: 2rem 4vw;
+  flex: 1;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 1rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #2a4365;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: #4a5568;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.serviceCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.serviceTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #2b6cb0;
+}
+
+.serviceDesc {
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+.contactSection {
+  width: 100%;
+  margin-top: 4rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #ebf8ff;
+  border-radius: 12px;
+}
+
+.contactTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2c5282;
+}
+
+.contactButton {
+  background: #3182ce;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contactButton:hover {
+  background: #2c5282;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .serviceCard {
+    padding: 1.5rem;
+  }
+
+  .navLink {
+    margin-left: 0.75rem;
+  }
+
+  .main {
+    padding: 2rem 2vw;
+  }
+}
+/* Contact us form *//* Contact Section: Full Width */
+.contactSection {
+  width: 100%;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  background-color: #f0f4f8;
+  box-sizing: border-box;
+}
+
+/* Container takes full width */
+.contactContainer {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* Optional: use media query to limit max-width on large screens */
+@media (min-width: 768px) {
+  .contactContainer {
+    width: 100%;
+    max-width: none; /* Remove max-width limit */
+  }
+}
+
+/* Title */
+.contactTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+/* Inputs and Textareas */
+.inputField,
+.textArea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #000000;
+  background-color: #f9fafb;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.5rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.inputField:focus,
+.textArea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  outline: none;
+}
+
+/* Button */
+.contactButton {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.contactButton:hover {
+  background-color: #1d4ed8;
+}
+
+.contactButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Messages */
+.errorMessage {
+  color: #dc2626;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.successMessage {
+  color: #059669;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .contactContainer {
+    padding: 2rem 1rem;
+  }
+
+  .contactTitle {
+    font-size: 2rem;
+  }
+}
+/* Ensure root elements take full width */
+html, body, #root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+  font-family: sans-serif;
+  background-color: #f9fafb;
+}
+
+/* Universal box-sizing */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Contact section full width by default */
+.contactSection {
+  width: 100vw;
+  padding: 4rem 1rem;
+  background-color: #f0f4f8;
+}
+
+/* Contact form container */
+.contactContainer {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Responsive form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
